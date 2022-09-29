@@ -30,7 +30,5 @@ public class stringsDemo {
         System.out.println(mesaj.toLowerCase());
         System.out.println(mesaj.toUpperCase());
         System.out.println(mesaj.trim()); //düzgün yazdırır boslugu düzeltir   String mesaj= "      Bugun hava cok guzel.";
-
-
     }
 }

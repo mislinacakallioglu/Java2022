@@ -13,7 +13,6 @@ public class sayiBulma {
                 break;
             }
         }
-
         if (varMi)
         {
             System.out.println("Sayi mevcuttur ");
@@ -22,6 +21,5 @@ public class sayiBulma {
         {
             System.out.println("Sayi mevcut degildir ");
         }
-
     }
 }
