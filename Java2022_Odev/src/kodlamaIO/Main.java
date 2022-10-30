@@ -25,8 +25,18 @@ public class Main {
         Category category1=new Category(1,"Yazilim ve Programlama");
         Instructor instructor1=new Instructor(1,"Engin" ,"Demirog");
 
-        List<Course> courses = new ArrayList<Course>();
-        List<Category> categories = new ArrayList<Category>();
+        //List<Course> courses = new ArrayList<Course>();
+       // List<Category> categories = new ArrayList<Category>();
+        Course[] courses = {
+                new Course(3,"Python ile yazılımcı yetiştirme kampı",1)
+
+        };
+
+
+        Category[] categories = {
+                new Category(2,"Otomasyon")
+
+        };
 
 
         Logger[] loggers = {new DatabaseLogger(),new FileLogger()};

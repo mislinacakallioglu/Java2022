@@ -10,9 +10,9 @@ public class CourseManager {
 
     private CourseDao courseDao;
     private Logger[] loggers;
-    private List<Course> courses;
+    private Course[] courses;
 
-    public CourseManager(CourseDao courseDao,Logger[] loggers,List<Course> courses){
+    public CourseManager(CourseDao courseDao,Logger[] loggers,Course[] courses){
         this.courseDao=courseDao;
         this.loggers=loggers;
         this.courses=courses;
@@ -20,10 +20,9 @@ public class CourseManager {
 
     public void add(Course course) throws Exception{
        for (Course course1:courses){
-           if (course1.getCoursePrice()==course.getCoursePrice()){
+           if (course1.getCourseName()==course.getCourseName()){
                throw new Exception("Girdiginiz kurs adi kullanilmaktadir, lutfen baska bir kurs adi giriniz! ");
            }
-
        }
        if (course.getCoursePrice()<0){
            throw new Exception("Kurs ucreti 0'dan kucuk olamaz. ");

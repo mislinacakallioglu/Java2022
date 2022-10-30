@@ -9,9 +9,9 @@ import java.util.List;
 public class CategoryManager {
     private CategoryDao categoryDao;
     private Logger[] loggers;
-    private List<Category> categories;
+    private Category[] categories;
 
-    public CategoryManager(CategoryDao categoryDao, Logger[] loggers, List<Category> categories) {
+    public CategoryManager(CategoryDao categoryDao, Logger[] loggers, Category[] categories) {
         this.categoryDao=categoryDao;
         this.loggers=loggers;
         this.categories=categories;
