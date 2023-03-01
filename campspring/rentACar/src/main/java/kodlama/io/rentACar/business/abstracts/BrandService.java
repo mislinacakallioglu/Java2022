@@ -7,8 +7,8 @@ import java.util.List;
 
 
 public interface BrandService {
-    abstract List<GetAllBrandsResponse> getAll();
 
-    void add(CreateBrandRequest createBrandRequest);
+     List<GetAllBrandsResponse> getAll();
+     void add(CreateBrandRequest createBrandRequest);
     }
 
