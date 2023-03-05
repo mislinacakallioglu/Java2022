@@ -2,27 +2,19 @@ package kodlama.io.rentACar.entities.concretes;
 
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Table(name="brands")
-//@Data  // getter + setter
+//@Data // getter + setter
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Brand {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // id'i otomatik artırma
     @Column(name="id")
@@ -30,5 +22,8 @@ public class Brand {
 
     @Column(name="name")
     private String name;
+
+    @OneToMany(mappedBy = "brand")
+    private List<Model> models;
 
 }
